@@ -34,24 +34,22 @@ class _MyAppState extends State<MyHomePage> {
                   },
                 ),
                 Positioned(
-                  bottom: 16,
+                  bottom: 24,
                   left: 0,
                   right: 0,
                   child: Center(
                     child: SmoothPageIndicator(
                       controller: _controller,
-                      count: 6,
-                      effect: WormEffect(),
-                      onDotClicked: (index) {
-                        _controller.animateToPage(
-                          index,
-                          duration: const Duration(milliseconds: 300),
-                          curve: Curves.easeInOut,
-                        );
-                      },
+                      count: 5,
+                      effect: WormEffect(
+                        dotWidth: 8,
+                        dotHeight: 8,
+                        activeDotColor: Color(0xffE25532),
+                      ),
+                      onDotClicked: (index){},
+                        )
                     ),
                   ),
-                ),
                 Positioned(
                   top: 40,
                   left: 8,
